@@ -4,8 +4,8 @@
   <p>Electron 기반 데스크톱 마크다운 에디터</p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-  [![Release](https://img.shields.io/github/v/release/hongdaeri/machodown)](https://github.com/hongdaeri/machodown/releases)
-  [![CI](https://github.com/hongdaeri/machodown/actions/workflows/ci.yml/badge.svg)](https://github.com/hongdaeri/machodown/actions/workflows/ci.yml)
+  [![Release](https://img.shields.io/github/v/release/hongmacho/machodown)](https://github.com/hongmacho/machodown/releases)
+  [![CI](https://github.com/hongmacho/machodown/actions/workflows/ci.yml/badge.svg)](https://github.com/hongmacho/machodown/actions/workflows/ci.yml)
 </div>
 
 마크다운 Editor + 실시간 프리뷰 + 멀티탭 + 워크스페이스를 지원합니다.
@@ -39,7 +39,7 @@
 ## 설치
 
 ### macOS
-1. [Releases](https://github.com/hongdaeri/machodown/releases) 페이지에서 `Machodown-{version}-arm64.dmg` (Apple Silicon) 또는 `Machodown-{version}-x64.dmg` (Intel) 다운로드
+1. [Releases](https://github.com/hongmacho/machodown/releases) 페이지에서 `Machodown-{version}-arm64.dmg` (Apple Silicon) 또는 `Machodown-{version}-x64.dmg` (Intel) 다운로드
 2. DMG를 열고 Applications 폴더로 드래그
 
 ### Windows
@@ -104,7 +104,7 @@
 ## 개발 환경 세팅
 
 ```bash
-git clone https://github.com/hongdaeri/machodown.git
+git clone https://github.com/hongmacho/machodown.git
 cd machodown
 npm install
 npm run dev

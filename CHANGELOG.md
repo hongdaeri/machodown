@@ -83,6 +83,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-[Unreleased]: https://github.com/hongdaeri/machodown/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/hongdaeri/machodown/compare/v0.1.0...v1.0.0
-[0.1.0]: https://github.com/hongdaeri/machodown/releases/tag/v0.1.0
+[Unreleased]: https://github.com/hongmacho/machodown/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/hongmacho/machodown/compare/v0.1.0...v1.0.0
+[0.1.0]: https://github.com/hongmacho/machodown/releases/tag/v0.1.0
