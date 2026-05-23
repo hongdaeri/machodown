@@ -53,7 +53,7 @@ macOS/Windows 배포 시 "확인되지 않은 개발자" 경고 없애기 위해
 ### 3-2. Release 워크플로우 (`.github/workflows/release.yml`)
 - [x] `v*` 태그 push 시 자동 트리거
 - [x] macOS (arm64 + x64) DMG/zip 빌드
-- [x] Windows x64 NSIS/portable 빌드
+- [ ] ~~Windows x64 NSIS/portable 빌드~~ (생략)
 - [x] Linux x64 AppImage/deb 빌드
 - [x] 빌드 결과물을 GitHub Release에 자동 업로드
 
