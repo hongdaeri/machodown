@@ -45,29 +45,6 @@ No subscriptions. No cloud sync. Just your files, your way.
 
 ---
 
-## Screenshots
-
-<table>
-  <tr>
-    <td><img src="docs/screenshots/01-split-view-dark.png" alt="Split View Dark"/></td>
-    <td><img src="docs/screenshots/01-split-view-light.png" alt="Split View Light"/></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Split View — Dark</em></td>
-    <td align="center"><em>Split View — Light</em></td>
-  </tr>
-  <tr>
-    <td><img src="docs/screenshots/02-editor-only.png" alt="Editor Only"/></td>
-    <td><img src="docs/screenshots/03-preview-only.png" alt="Preview Only"/></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Editor Focus</em></td>
-    <td align="center"><em>Preview Focus</em></td>
-  </tr>
-</table>
-
----
-
 ## Installation
 
 ### macOS (Recommended)

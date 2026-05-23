@@ -45,29 +45,6 @@
 
 ---
 
-## 스크린샷
-
-<table>
-  <tr>
-    <td><img src="docs/screenshots/01-split-view-dark.png" alt="스플릿 뷰 다크"/></td>
-    <td><img src="docs/screenshots/01-split-view-light.png" alt="스플릿 뷰 라이트"/></td>
-  </tr>
-  <tr>
-    <td align="center"><em>스플릿 뷰 — 다크</em></td>
-    <td align="center"><em>스플릿 뷰 — 라이트</em></td>
-  </tr>
-  <tr>
-    <td><img src="docs/screenshots/02-editor-only.png" alt="에디터 전용"/></td>
-    <td><img src="docs/screenshots/03-preview-only.png" alt="프리뷰 전용"/></td>
-  </tr>
-  <tr>
-    <td align="center"><em>에디터 집중 모드</em></td>
-    <td align="center"><em>프리뷰 집중 모드</em></td>
-  </tr>
-</table>
-
----
-
 ## 설치
 
 ### macOS (권장)
