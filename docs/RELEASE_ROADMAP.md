@@ -7,19 +7,19 @@
 ## Phase 1. GitHub 리포지토리 공개 준비
 
 ### 1-1. 리포지토리 정리
-- [ ] GitHub에 public 리포지토리 생성 (`hongpaul/machodown`)
-- [ ] `remote` 추가 및 첫 push
-- [ ] `LICENSE` 파일 추가 (MIT 권장)
-- [ ] `CONTRIBUTING.md` 작성 (기여 가이드)
-- [ ] `.github/ISSUE_TEMPLATE/` 이슈 템플릿 추가 (버그 리포트, 기능 제안)
-- [ ] `.github/pull_request_template.md` 추가
+- [x] GitHub에 public 리포지토리 생성 (`hongdaeri/machodown`)
+- [x] `remote` 추가 및 첫 push
+- [x] `LICENSE` 파일 추가 (MIT 권장)
+- [x] `CONTRIBUTING.md` 작성 (기여 가이드)
+- [x] `.github/ISSUE_TEMPLATE/` 이슈 템플릿 추가 (버그 리포트, 기능 제안)
+- [x] `.github/pull_request_template.md` 추가
 
 ### 1-2. README 보강
 - [ ] 앱 스크린샷 추가
-- [ ] 기능 목록 정리
-- [ ] 설치 방법 (DMG 다운로드 링크 / `brew install` 옵션)
-- [ ] 개발 환경 세팅 방법 (`git clone` → `npm install` → `npm run dev`)
-- [ ] 라이선스 배지, 버전 배지 추가
+- [x] 기능 목록 정리
+- [x] 설치 방법 (DMG 다운로드 링크 / `brew install` 옵션)
+- [x] 개발 환경 세팅 방법 (`git clone` → `npm install` → `npm run dev`)
+- [x] 라이선스 배지, 버전 배지 추가
 
 ---
 
@@ -45,17 +45,17 @@ macOS/Windows 배포 시 "확인되지 않은 개발자" 경고 없애기 위해
 자동화된 빌드 및 릴리즈 파이프라인 구성.
 
 ### 3-1. CI 워크플로우 (`.github/workflows/ci.yml`)
-- [ ] Push/PR 시 자동 실행
+- [x] Push/PR 시 자동 실행
   - `npm run typecheck`
   - `npm run lint`
   - `npx vitest run`
 
 ### 3-2. Release 워크플로우 (`.github/workflows/release.yml`)
-- [ ] `v*` 태그 push 시 자동 트리거
-- [ ] macOS (arm64 + x64) DMG/zip 빌드
-- [ ] Windows x64 NSIS/portable 빌드
-- [ ] Linux x64 AppImage/deb 빌드
-- [ ] 빌드 결과물을 GitHub Release에 자동 업로드
+- [x] `v*` 태그 push 시 자동 트리거
+- [x] macOS (arm64 + x64) DMG/zip 빌드
+- [x] Windows x64 NSIS/portable 빌드
+- [x] Linux x64 AppImage/deb 빌드
+- [x] 빌드 결과물을 GitHub Release에 자동 업로드
 
 ```yaml
 # 트리거 예시
@@ -79,8 +79,8 @@ on:
 
 `electron-updater`가 이미 설치되어 있으므로 설정만 활성화.
 
-- [ ] `publish` 설정 확인 (`package.json` → `build.publish`)
-- [ ] `autoUpdater` 코드 활성화 (`src/main/ipc/updater.ts`)
+- [x] `publish` 설정 확인 (`package.json` → `build.publish`)
+- [x] `autoUpdater` 코드 활성화 (`src/main/ipc/updater.ts`)
 - [ ] 업데이트 확인 → 다운로드 → 재시작 흐름 UI 테스트
 - [ ] GitHub Releases의 `latest-mac.yml` / `latest.yml` 자동 생성 확인
 
@@ -90,7 +90,7 @@ on:
 
 ### 5-1. 버전 확정
 - [ ] `package.json` 버전 `0.1.0` → 정식 버전 결정 (예: `1.0.0`)
-- [ ] `CHANGELOG.md` 작성 (변경 내역 정리)
+- [x] `CHANGELOG.md` 작성 (변경 내역 정리)
 
 ### 5-2. 태그 & 릴리즈
 ```bash
@@ -114,7 +114,7 @@ git push origin v1.0.0
 - [ ] 버그 수정 → patch 버전 (`1.0.1`)
 - [ ] 기능 추가 → minor 버전 (`1.1.0`)
 - [ ] 브레이킹 체인지 → major 버전 (`2.0.0`)
-- [ ] Dependabot 활성화 (의존성 자동 업데이트 PR)
+- [x] Dependabot 활성화 (의존성 자동 업데이트 PR)
 
 ---
 

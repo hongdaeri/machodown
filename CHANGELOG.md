@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Markflow are documented here.
+All notable changes to Machodown are documented here.
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
@@ -27,7 +27,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - 에디터 / 프리뷰 / 스플릿 뷰 전환
 - 파일 열기 · 저장 · 다른 이름으로 저장 IPC
 - 자동저장 (500ms debounce, 설정 가능)
-- markflow-light / markflow-dark Monaco 커스텀 테마
+- machodown-light / machodown-dark Monaco 커스텀 테마
 - 라이트 / 다크 / 시스템 테마
 - 앱 메뉴바 및 키보드 단축키
 - 상태바 (인코딩 · EOL · 커서 위치)
@@ -71,5 +71,5 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-[Unreleased]: https://github.com/hongpaul/markflow/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/hongpaul/markflow/releases/tag/v0.1.0
+[Unreleased]: https://github.com/hongdaeri/machodown/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/hongdaeri/machodown/releases/tag/v0.1.0

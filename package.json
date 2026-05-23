@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Machodown — Electron Markdown Editor",
   "main": "./out/main/index.js",
-  "homepage": "https://github.com/hongpaul/machodown",
+  "homepage": "https://github.com/hongdaeri/machodown",
   "author": {
     "name": "hongpaul",
     "email": "paul@secuware.co.kr"
@@ -94,7 +94,7 @@
     "copyright": "Copyright © 2024 ${author}",
     "publish": {
       "provider": "github",
-      "owner": "hongpaul",
+      "owner": "hongdaeri",
       "repo": "machodown"
     },
     "mac": {
