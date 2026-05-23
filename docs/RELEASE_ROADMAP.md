@@ -82,7 +82,7 @@ on:
 - [x] `publish` 설정 확인 (`package.json` → `build.publish`)
 - [x] `autoUpdater` 코드 활성화 (`src/main/ipc/updater.ts`)
 - [ ] 업데이트 확인 → 다운로드 → 재시작 흐름 UI 테스트
-- [ ] GitHub Releases의 `latest-mac.yml` / `latest.yml` 자동 생성 확인
+- [x] GitHub Releases의 `latest-mac.yml` / `latest.yml` 자동 생성 확인
 
 ---
 
@@ -97,9 +97,9 @@ on:
 git tag v1.0.0
 git push origin v1.0.0
 ```
-- [ ] GitHub Actions Release 워크플로우 실행 확인
+- [x] GitHub Actions Release 워크플로우 실행 확인
 - [ ] GitHub Releases 페이지에서 DMG/exe/AppImage 다운로드 검증
-- [ ] Release Notes 작성
+- [x] Release Notes 작성
 
 ### 5-3. 배포 채널 홍보 (선택)
 - [ ] Homebrew Cask 등록 (`brew install --cask machodown`)
