@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>machodown — Brand Sheet</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #0d0e10;
+      color: #e6e7ea;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 56px 40px 96px; }
+    h1 {
+      font-size: 32px; font-weight: 700; letter-spacing: -0.015em;
+      margin: 0 0 8px;
+    }
+    .sub { color: #8a8f97; font-size: 14px; margin-bottom: 48px; }
+
+    section { margin-bottom: 56px; }
+    h2 {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #8a8f97;
+      margin: 0 0 18px;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 30% 25%, #2a2d33 0%, transparent 55%),
+        radial-gradient(circle at 75% 80%, #1b1d22 0%, transparent 55%),
+        #0e0f12;
+      padding: 80px;
+      border-radius: 16px;
+      border: 1px solid #1f2227;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero img { width: 360px; height: 360px; }
+
+    .sizes {
+      display: flex; align-items: flex-end; gap: 40px;
+      padding: 32px; border-radius: 12px;
+      background: #15171a; border: 1px solid #24272c;
+    }
+    .size-cell { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .size-cell .label { font-size: 11px; color: #6e7480; font-family: ui-monospace, Menlo, monospace; }
+
+    .grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .swatch {
+      background: #15171a; border: 1px solid #24272c; border-radius: 10px;
+      padding: 16px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .swatch .chip {
+      height: 80px; border-radius: 6px;
+    }
+    .swatch .name { font-size: 13px; font-weight: 600; }
+    .swatch .hex { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #8a8f97; }
+    .swatch .use { font-size: 12px; color: #8a8f97; line-height: 1.5; }
+
+    .usage {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .ctx {
+      background: #15171a; border: 1px solid #24272c; border-radius: 12px;
+      padding: 22px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start;
+    }
+    .ctx-title { font-size: 11px; color: #8a8f97; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+
+    .dock {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 20px; padding: 10px 14px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .dock-other {
+      width: 52px; height: 52px; border-radius: 12px;
+      background: linear-gradient(135deg, #3a3d44, #1f2126);
+      opacity: 0.45;
+    }
+
+    .taskbar {
+      background: rgba(20, 22, 26, 0.95);
+      border: 1px solid #2a2d33;
+      border-radius: 8px;
+      padding: 10px 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .taskbar img { width: 36px; height: 36px; }
+    .taskbar .label { font-size: 12.5px; color: #e6e7ea; }
+
+    .tabs {
+      background: #1b1d21;
+      border: 1px solid #2a2d33;
+      border-radius: 10px;
+      padding: 6px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .tab-pill {
+      display: flex; align-items: center; gap: 8px;
+      background: #2a2d33; border-radius: 7px;
+      padding: 6px 12px;
+    }
+    .tab-pill img { width: 16px; height: 16px; }
+    .tab-pill .t { font-size: 12px; }
+    .tab-pill .x { color: #8a8f97; }
+
+    .files {
+      background: #15171a; border: 1px solid #24272c; border-radius: 12px;
+      padding: 18px 22px;
+    }
+    .files table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .files th, .files td {
+      text-align: left; padding: 10px 12px;
+      border-bottom: 1px solid #24272c;
+    }
+    .files th { color: #6e7480; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .files td.path { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #e6e7ea; }
+    .files td.use { color: #a8acb4; }
+
+    code.inline {
+      font-family: ui-monospace, Menlo, monospace;
+      background: #1b1d21;
+      border: 1px solid #2a2d33;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>machodown — App Icon</h1>
+    <div class="sub">코랄 <code class="inline">&gt;</code> + 화이트 <code class="inline">MD</code> · 어두운 squircle · 모노스페이스 · 가운데 정렬</div>
+
+    <section>
+      <h2>마스터</h2>
+      <div class="hero">
+        <img src="png/icon-512.png" alt="machodown icon 512" />
+      </div>
+    </section>
+
+    <section>
+      <h2>사이즈 (PNG)</h2>
+      <div class="sizes">
+        <div class="size-cell"><img src="png/icon-1024.png" width="128" height="128"/><span class="label">1024</span></div>
+        <div class="size-cell"><img src="png/icon-512.png" width="96" height="96"/><span class="label">512</span></div>
+        <div class="size-cell"><img src="png/icon-256.png" width="64" height="64"/><span class="label">256</span></div>
+        <div class="size-cell"><img src="png/icon-128.png" width="48" height="48"/><span class="label">128</span></div>
+        <div class="size-cell"><img src="png/icon-64.png" width="32" height="32"/><span class="label">64</span></div>
+        <div class="size-cell"><img src="png/icon-32.png" width="24" height="24"/><span class="label">32</span></div>
+        <div class="size-cell"><img src="png/icon-16.png" width="16" height="16"/><span class="label">16</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>컬러</h2>
+      <div class="grid-3">
+        <div class="swatch">
+          <div class="chip" style="background: linear-gradient(135deg, #1a1a1a, #0d0d0d);"></div>
+          <div class="name">Background</div>
+          <div class="hex">#1A1A1A → #0D0D0D</div>
+          <div class="use">어두운 squircle 그라데이션</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background: #d97757;"></div>
+          <div class="name">Coral · Caret</div>
+          <div class="hex">#D97757</div>
+          <div class="use"><code class="inline">&gt;</code> 프롬프트 액센트</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background: #f4f1ea;"></div>
+          <div class="name">Off-white · MD</div>
+          <div class="hex">#F4F1EA</div>
+          <div class="use"><code class="inline">MD</code> 워드마크</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>플랫폼 미리보기</h2>
+      <div class="usage">
+        <div class="ctx">
+          <div class="ctx-title">macOS Dock</div>
+          <div class="dock">
+            <div class="dock-other"></div>
+            <div class="dock-other"></div>
+            <img src="png/icon-64.png" width="52" height="52"/>
+            <div class="dock-other"></div>
+            <div class="dock-other"></div>
+          </div>
+        </div>
+
+        <div class="ctx">
+          <div class="ctx-title">Windows Taskbar</div>
+          <div class="taskbar">
+            <img src="png/icon-48.png" />
+            <span class="label">machodown</span>
+          </div>
+        </div>
+
+        <div class="ctx">
+          <div class="ctx-title">Tab · Favicon</div>
+          <div class="tabs">
+            <div class="tab-pill">
+              <img src="png/icon-16.png" />
+              <span class="t">machodown</span>
+              <span class="x">×</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>파일 구성</h2>
+      <div class="files">
+        <table>
+          <thead><tr><th>경로</th><th>용도</th></tr></thead>
+          <tbody>
+            <tr><td class="path">brand/machodown-icon.svg</td><td class="use">마스터 (벡터)</td></tr>
+            <tr><td class="path">brand/png/icon-1024.png</td><td class="use">App Store, electron-builder buildResources/icon.png</td></tr>
+            <tr><td class="path">brand/png/icon-512.png</td><td class="use">macOS .icns 변환용</td></tr>
+            <tr><td class="path">brand/png/icon-256.png</td><td class="use">Windows .ico 변환용 (가장 큰 사이즈)</td></tr>
+            <tr><td class="path">brand/png/icon-128 / 64 / 48 / 32 / 24 / 16.png</td><td class="use">.ico 멀티 사이즈 / Linux 아이콘 세트</td></tr>
+            <tr><td class="path">brand/README.md</td><td class="use">.icns / .ico 빌드 방법</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

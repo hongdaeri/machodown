@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>machodown — App Icon</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"></stop>
+      <stop offset="100%" stop-color="#0d0d0d"></stop>
+    </linearGradient>
+  </defs>
+
+  
+  <path fill="url(#bg)" d="&#xA;    M 230.4 0&#xA;    H 793.6&#xA;    C 897.28 0, 1024 126.72, 1024 230.4&#xA;    V 793.6&#xA;    C 1024 897.28, 897.28 1024, 793.6 1024&#xA;    H 230.4&#xA;    C 126.72 1024, 0 897.28, 0 793.6&#xA;    V 230.4&#xA;    C 0 126.72, 126.72 0, 230.4 0 Z"></path>
+
+  
+  <path fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" d="&#xA;    M 230.4 0.5&#xA;    H 793.6&#xA;    C 897.28 0.5, 1023.5 126.72, 1023.5 230.4&#xA;    V 793.6&#xA;    C 1023.5 897.28, 897.28 1023.5, 793.6 1023.5&#xA;    H 230.4&#xA;    C 126.72 1023.5, 0.5 897.28, 0.5 793.6&#xA;    V 230.4&#xA;    C 0.5 126.72, 126.72 0.5, 230.4 0.5 Z"></path>
+
+  
+  <text x="512" y="512" text-anchor="middle" dominant-baseline="central" font-family="&#39;JetBrains Mono&#39;, &#39;SF Mono&#39;, &#39;Cascadia Mono&#39;, ui-monospace, Menlo, Consolas, monospace" font-size="307.2" font-weight="700" letter-spacing="-3.07">
+    <tspan fill="#d97757">&gt;</tspan>
+    <tspan fill="#f4f1ea" dx="61.4">MD</tspan>
+  </text>
+</svg>

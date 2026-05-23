@@ -1,0 +1,18 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": ["src/renderer/src/**/*"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@renderer/*": ["./src/renderer/src/*"],
+      "@components/*": ["./src/renderer/src/components/*"],
+      "@stores/*": ["./src/renderer/src/stores/*"],
+      "@hooks/*": ["./src/renderer/src/hooks/*"],
+      "@lib/*": ["./src/renderer/src/lib/*"],
+      "@styles/*": ["./src/renderer/src/styles/*"]
+    }
+  }
+}
