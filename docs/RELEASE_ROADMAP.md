@@ -15,7 +15,7 @@
 - [x] `.github/pull_request_template.md` 추가
 
 ### 1-2. README 보강
-- [ ] 앱 스크린샷 추가
+- [x] 앱 스크린샷 추가
 - [x] 기능 목록 정리
 - [x] 설치 방법 (DMG 다운로드 링크 / `brew install` 옵션)
 - [x] 개발 환경 세팅 방법 (`git clone` → `npm install` → `npm run dev`)
