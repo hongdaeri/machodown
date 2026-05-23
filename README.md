@@ -5,11 +5,16 @@
   <h1>Machodown</h1>
   <p>A Monaco Editor-based Markdown editor for macOS and Linux.<br/>Write beautifully. Think clearly.</p>
 
+  <a href="https://hongmacho.github.io/machodown/">
+    <img src="https://img.shields.io/badge/🌐%20Website-hongmacho.github.io%2Fmachodown-D97757?style=for-the-badge" alt="Website" />
+  </a>
+
+  <br/><br/>
+
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
   [![Release](https://img.shields.io/github/v/release/hongmacho/machodown)](https://github.com/hongmacho/machodown/releases)
   [![CI](https://github.com/hongmacho/machodown/actions/workflows/ci.yml/badge.svg)](https://github.com/hongmacho/machodown/actions/workflows/ci.yml)
   [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)](https://github.com/hongmacho/machodown/releases)
-  [![Website](https://img.shields.io/badge/website-hongmacho.github.io%2Fmachodown-D97757)](https://hongmacho.github.io/machodown/)
 </div>
 
 ---
