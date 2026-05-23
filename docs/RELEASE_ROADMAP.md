@@ -7,7 +7,7 @@
 ## Phase 1. GitHub 리포지토리 공개 준비
 
 ### 1-1. 리포지토리 정리
-- [x] GitHub에 public 리포지토리 생성 (`hongdaeri/machodown`)
+- [x] GitHub에 public 리포지토리 생성 (`hongmacho/machodown`)
 - [x] `remote` 추가 및 첫 push
 - [x] `LICENSE` 파일 추가 (MIT 권장)
 - [x] `CONTRIBUTING.md` 작성 (기여 가이드)

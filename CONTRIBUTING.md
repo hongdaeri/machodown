@@ -5,7 +5,7 @@
 ## 개발 환경 세팅
 
 ```bash
-git clone https://github.com/hongdaeri/machodown.git
+git clone https://github.com/hongmacho/machodown.git
 cd machodown
 npm install
 npm run dev

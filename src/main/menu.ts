@@ -173,7 +173,7 @@ export function createMenu(): void {
         {
           label: 'GitHub',
           click: async () => {
-            await shell.openExternal('https://github.com/hongdaeri/machodown')
+            await shell.openExternal('https://github.com/hongmacho/machodown')
           }
         }
       ]
