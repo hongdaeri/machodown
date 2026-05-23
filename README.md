@@ -9,6 +9,7 @@
   [![Release](https://img.shields.io/github/v/release/hongmacho/machodown)](https://github.com/hongmacho/machodown/releases)
   [![CI](https://github.com/hongmacho/machodown/actions/workflows/ci.yml/badge.svg)](https://github.com/hongmacho/machodown/actions/workflows/ci.yml)
   [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)](https://github.com/hongmacho/machodown/releases)
+  [![Website](https://img.shields.io/badge/website-hongmacho.github.io%2Fmachodown-D97757)](https://hongmacho.github.io/machodown/)
 </div>
 
 ---
@@ -38,7 +39,6 @@ No subscriptions. No cloud sync. Just your files, your way.
 | 🔄 | **File Watch** | External change detection and conflict resolution |
 | 🔍 | **Search & Replace** | Regex-powered find & replace across the editor |
 | 🎨 | **Themes** | Light / Dark / System auto |
-| ⬆️ | **Auto-update** | Silent updates via GitHub Releases |
 | 📐 | **KaTeX Math** | Full LaTeX math rendering inline and block |
 | 📋 | **TOC Panel** | Auto-generated table of contents sidebar |
 | ⌨️ | **Command Palette** | `Cmd+K` for everything |
@@ -53,8 +53,8 @@ Download from [Releases](https://github.com/hongmacho/machodown/releases):
 
 | Chip | File |
 |---|---|
-| Apple Silicon (M1/M2/M3) | `Machodown-1.0.0-arm64.dmg` |
-| Intel | `Machodown-1.0.0-x64.dmg` |
+| Apple Silicon (M1/M2/M3) | `Machodown-1.0.1-arm64.dmg` |
+| Intel | `Machodown-1.0.1-x64.dmg` |
 
 > Code-signed and notarized by Apple — no "unidentified developer" warnings.
 
@@ -62,8 +62,8 @@ Download from [Releases](https://github.com/hongmacho/machodown/releases):
 
 | Format | File |
 |---|---|
-| AppImage | `Machodown-1.0.0-x86_64.AppImage` |
-| Debian / Ubuntu | `machodown_1.0.0_amd64.deb` |
+| AppImage | `Machodown-1.0.1-x86_64.AppImage` |
+| Debian / Ubuntu | `machodown_1.0.1_amd64.deb` |
 
 ```bash
 # AppImage
@@ -75,9 +75,8 @@ sudo dpkg -i machodown_*.deb
 
 ### Homebrew (macOS)
 
-> Homebrew Cask submission is [in review](https://github.com/Homebrew/homebrew-cask/pull/265869). Once merged:
-
 ```bash
+brew tap hongmacho/machodown
 brew install --cask machodown
 ```
 
