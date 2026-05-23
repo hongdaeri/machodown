@@ -144,18 +144,6 @@ describe('handleLaunch', () => {
     expect(mockOpenModal).toHaveBeenCalledWith('welcome')
   })
 
-  it('after-update → releaseNotes 모달 열기', async () => {
-    mockInvoke.mockResolvedValueOnce({ ok: true, type: 'after-update' })
-    const mockOpenModal = vi.fn()
-    vi.mocked(useUiStore.getState).mockReturnValue({
-      openModal: mockOpenModal
-    } as unknown as ReturnType<typeof useUiStore.getState>)
-
-    await handleLaunch()
-
-    expect(mockOpenModal).toHaveBeenCalledWith('releaseNotes')
-  })
-
   it('normal → 세션 탭 복원 시도', async () => {
     mockInvoke.mockResolvedValueOnce({ ok: true, type: 'normal' }).mockResolvedValue(undefined) // fs:readFile calls (no session)
 

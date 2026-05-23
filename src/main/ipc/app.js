@@ -24,7 +24,11 @@ async function detectLaunchType() {
     const raw = await fs.readFile(configPath, 'utf-8')
     const parsed = JSON.parse(raw)
     const savedVersion = parsed.$appVersion
-    if (savedVersion !== app.getVersion()) return 'after-update'
+    if (!savedVersion) return 'first-launch'
+    if (savedVersion !== app.getVersion()) {
+      parsed.$appVersion = app.getVersion()
+      await fs.writeFile(configPath, JSON.stringify(parsed, null, 2), 'utf-8')
+    }
     return 'normal'
   } catch (err) {
     const code = err.code
@@ -40,24 +44,6 @@ export function registerAppHandlers() {
   ipcMain.handle('app:launchType', async () => {
     const type = await detectLaunchType()
     return { ok: true, type }
-  })
-  ipcMain.handle('app:finishUpdate', async () => {
-    const configPath = join(app.getPath('userData'), 'config.json')
-    try {
-      let config = {}
-      try {
-        const raw = await fs.readFile(configPath, 'utf-8')
-        config = JSON.parse(raw)
-      } catch {
-        // config doesn't exist yet — start fresh
-      }
-      config.$appVersion = app.getVersion()
-      await fs.writeFile(configPath, JSON.stringify(config, null, 2), 'utf-8')
-      return { ok: true }
-    } catch (err) {
-      log.warn('app:finishUpdate: failed to write config', err)
-      return { ok: false, message: 'Failed to update config' }
-    }
   })
   ipcMain.handle('app:reportError', (_, args) => {
     log.error('[renderer]', args.message, args.stack)

@@ -7,7 +7,6 @@ import { ShortcutsModal } from './ShortcutsModal'
 import { EncodingModal } from './EncodingModal'
 import { EolModal } from './EolModal'
 import { WelcomeModal } from './WelcomeModal'
-import { ReleaseNotesModal } from './ReleaseNotesModal'
 import { RecoveryDialog } from './RecoveryDialog'
 import { CommandPaletteModal } from './CommandPaletteModal'
 import { SettingsModal } from './SettingsModal'
@@ -36,8 +35,6 @@ export function ModalManager(): JSX.Element | null {
       return <EolModal />
     case 'welcome':
       return <WelcomeModal />
-    case 'releaseNotes':
-      return <ReleaseNotesModal />
     case 'recovery':
       return <RecoveryDialog />
     case 'commandPalette':

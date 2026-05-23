@@ -21,7 +21,7 @@ export async function detectAbnormalShutdown(): Promise<boolean> {
   return wasAbnormal
 }
 
-type LaunchType = 'first-launch' | 'after-update' | 'normal'
+type LaunchType = 'first-launch' | 'normal'
 
 async function detectLaunchType(): Promise<LaunchType> {
   const configPath = join(app.getPath('userData'), 'config.json')
@@ -29,7 +29,11 @@ async function detectLaunchType(): Promise<LaunchType> {
     const raw = await fs.readFile(configPath, 'utf-8')
     const parsed = JSON.parse(raw) as Record<string, unknown>
     const savedVersion = parsed.$appVersion as string | undefined
-    if (savedVersion !== app.getVersion()) return 'after-update'
+    if (!savedVersion) return 'first-launch'
+    if (savedVersion !== app.getVersion()) {
+      parsed.$appVersion = app.getVersion()
+      await fs.writeFile(configPath, JSON.stringify(parsed, null, 2), 'utf-8')
+    }
     return 'normal'
   } catch (err: unknown) {
     const code = (err as NodeJS.ErrnoException).code
@@ -47,25 +51,6 @@ export function registerAppHandlers(): void {
   ipcMain.handle('app:launchType', async () => {
     const type = await detectLaunchType()
     return { ok: true, type }
-  })
-
-  ipcMain.handle('app:finishUpdate', async () => {
-    const configPath = join(app.getPath('userData'), 'config.json')
-    try {
-      let config: Record<string, unknown> = {}
-      try {
-        const raw = await fs.readFile(configPath, 'utf-8')
-        config = JSON.parse(raw) as Record<string, unknown>
-      } catch {
-        // config doesn't exist yet — start fresh
-      }
-      config.$appVersion = app.getVersion()
-      await fs.writeFile(configPath, JSON.stringify(config, null, 2), 'utf-8')
-      return { ok: true }
-    } catch (err: unknown) {
-      log.warn('app:finishUpdate: failed to write config', err)
-      return { ok: false, message: 'Failed to update config' }
-    }
   })
 
   ipcMain.handle('app:reportError', (_, args: { message: string; stack?: string }) => {

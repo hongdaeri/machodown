@@ -36,10 +36,7 @@ const ALLOWED_INVOKE_CHANNELS = [
   'workspace:removeFolder',
   'recent:getFiles',
   'recent:addFile',
-  'nativeTheme:get',
-  'update:check',
-  'update:install',
-  'releaseNotes:get'
+  'nativeTheme:get'
 ]
 const ALLOWED_ON_CHANNELS = [
   'menu:newFile',
@@ -57,10 +54,7 @@ const ALLOWED_ON_CHANNELS = [
   'watch:added',
   'watch:removed',
   'backup:recoveryAvailable',
-  'theme:nativeChanged',
-  'updater:checking',
-  'updater:available',
-  'updater:downloaded'
+  'theme:nativeChanged'
 ]
 const api = {
   invoke: (channel, ...args) => {

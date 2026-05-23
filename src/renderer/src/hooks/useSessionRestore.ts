@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useUiStore } from '../stores/uiStore'
 import { restoreSessionTabs } from '../lib/sessionActions'
 
-type LaunchType = 'first-launch' | 'after-update' | 'normal'
+type LaunchType = 'first-launch' | 'normal'
 
 interface LaunchTypeResult {
   ok: true
@@ -22,11 +22,6 @@ export async function handleLaunch(): Promise<void> {
 
   if (result.type === 'first-launch') {
     openModal('welcome')
-    return
-  }
-
-  if (result.type === 'after-update') {
-    openModal('releaseNotes')
     return
   }
 

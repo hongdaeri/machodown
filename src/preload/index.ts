@@ -37,10 +37,7 @@ const ALLOWED_INVOKE_CHANNELS = [
   'workspace:removeFolder',
   'recent:getFiles',
   'recent:addFile',
-  'nativeTheme:get',
-  'update:check',
-  'update:install',
-  'releaseNotes:get'
+  'nativeTheme:get'
 ] as const
 
 const ALLOWED_ON_CHANNELS = [
@@ -59,10 +56,7 @@ const ALLOWED_ON_CHANNELS = [
   'watch:added',
   'watch:removed',
   'backup:recoveryAvailable',
-  'theme:nativeChanged',
-  'updater:checking',
-  'updater:available',
-  'updater:downloaded'
+  'theme:nativeChanged'
 ] as const
 
 type InvokeChannel = (typeof ALLOWED_INVOKE_CHANNELS)[number]

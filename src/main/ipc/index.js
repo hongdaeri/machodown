@@ -11,7 +11,6 @@ import { registerWorkspaceHandlers } from './workspace'
 import { registerRecentHandlers } from './recent'
 import { registerThemeHandlers } from './theme'
 import { registerSearchHandlers } from './search'
-import { registerUpdaterHandlers } from './updater'
 export function registerIpcHandlers() {
   registerFsHandlers()
   registerDialogHandlers()
@@ -26,5 +25,4 @@ export function registerIpcHandlers() {
   registerRecentHandlers()
   registerThemeHandlers()
   registerSearchHandlers()
-  registerUpdaterHandlers()
 }
