@@ -8,7 +8,7 @@
   [![CI](https://github.com/hongdaeri/machodown/actions/workflows/ci.yml/badge.svg)](https://github.com/hongdaeri/machodown/actions/workflows/ci.yml)
 </div>
 
-Monaco Editor + 실시간 프리뷰 + 멀티탭 + 워크스페이스를 지원합니다.
+마크다운 Editor + 실시간 프리뷰 + 멀티탭 + 워크스페이스를 지원합니다.
 
 ## 스크린샷
 

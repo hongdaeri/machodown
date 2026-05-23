@@ -65,13 +65,13 @@ on:
       - 'v*'
 ```
 
-### 3-3. 필요한 GitHub Secrets 등록
-- `APPLE_ID`
-- `APPLE_APP_SPECIFIC_PASSWORD`
-- `APPLE_TEAM_ID`
-- `CSC_LINK` (macOS 인증서 base64)
-- `CSC_KEY_PASSWORD`
-- `GH_TOKEN` (GitHub Release 업로드용)
+### 3-3. 필요한 GitHub Secrets 등록 ✅
+- [x] `APPLE_ID`
+- [x] `APPLE_APP_SPECIFIC_PASSWORD`
+- [x] `APPLE_TEAM_ID`
+- [x] `CSC_LINK` (macOS 인증서 base64)
+- [x] `CSC_KEY_PASSWORD`
+- [x] `GH_TOKEN` (GitHub Release 업로드용)
 
 ---
 
@@ -89,7 +89,7 @@ on:
 ## Phase 5. 첫 릴리즈 배포
 
 ### 5-1. 버전 확정
-- [ ] `package.json` 버전 `0.1.0` → 정식 버전 결정 (예: `1.0.0`)
+- [x] `package.json` 버전 `0.1.0` → `1.0.0` 확정
 - [x] `CHANGELOG.md` 작성 (변경 내역 정리)
 
 ### 5-2. 태그 & 릴리즈
@@ -110,7 +110,7 @@ git push origin v1.0.0
 
 ## Phase 6. 유지보수 체계
 
-- [ ] GitHub Issues 라벨 정리 (`bug`, `enhancement`, `good first issue`)
+- [x] GitHub Issues 라벨 정리 (`bug`, `enhancement`, `good first issue`)
 - [ ] 버그 수정 → patch 버전 (`1.0.1`)
 - [ ] 기능 추가 → minor 버전 (`1.1.0`)
 - [ ] 브레이킹 체인지 → major 버전 (`2.0.0`)

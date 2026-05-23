@@ -9,6 +9,18 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.0.0] — 2026-05-23
+
+### Added
+- 첫 공식 릴리즈
+- GitHub Actions CI/CD 자동 빌드 및 릴리즈 파이프라인
+- macOS arm64/x64 코드 서명 및 공증(Notarization)
+- Windows x64 NSIS/Portable 빌드
+- Linux x64 AppImage/deb 빌드
+- electron-updater GitHub Releases 자동 업데이트
+
+---
+
 ## [0.1.0] — 2026-05-23
 
 ### Added
@@ -71,5 +83,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-[Unreleased]: https://github.com/hongdaeri/machodown/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/hongdaeri/machodown/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/hongdaeri/machodown/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/hongdaeri/machodown/releases/tag/v0.1.0
