@@ -1,10 +1,18 @@
-# Machodown
+<div align="center">
+  <img src="brand/png/icon-128.png" alt="Machodown" width="96" height="96" />
+  <h1>Machodown</h1>
+  <p>Electron 기반 데스크톱 마크다운 에디터</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/hongdaeri/machodown)](https://github.com/hongdaeri/machodown/releases)
-[![CI](https://github.com/hongdaeri/machodown/actions/workflows/ci.yml/badge.svg)](https://github.com/hongdaeri/machodown/actions/workflows/ci.yml)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  [![Release](https://img.shields.io/github/v/release/hongdaeri/machodown)](https://github.com/hongdaeri/machodown/releases)
+  [![CI](https://github.com/hongdaeri/machodown/actions/workflows/ci.yml/badge.svg)](https://github.com/hongdaeri/machodown/actions/workflows/ci.yml)
+</div>
 
-Electron 기반 데스크톱 마크다운 에디터. Monaco Editor + 실시간 프리뷰 + 멀티탭 + 워크스페이스를 지원합니다.
+Monaco Editor + 실시간 프리뷰 + 멀티탭 + 워크스페이스를 지원합니다.
+
+## 스크린샷
+
+![Machodown 스플릿 뷰](docs/screenshots/01-split-view-dark.png)
 
 ## 기능
 
