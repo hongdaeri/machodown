@@ -1,107 +1,152 @@
+[한국어](README.ko.md)
+
 <div align="center">
   <img src="brand/png/icon-128.png" alt="Machodown" width="96" height="96" />
   <h1>Machodown</h1>
-  <p>Electron 기반 데스크톱 마크다운 에디터</p>
+  <p>A Monaco Editor-based Markdown editor for macOS and Linux.<br/>Write beautifully. Think clearly.</p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
   [![Release](https://img.shields.io/github/v/release/hongmacho/machodown)](https://github.com/hongmacho/machodown/releases)
   [![CI](https://github.com/hongmacho/machodown/actions/workflows/ci.yml/badge.svg)](https://github.com/hongmacho/machodown/actions/workflows/ci.yml)
+  [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)](https://github.com/hongmacho/machodown/releases)
 </div>
 
-마크다운 Editor + 실시간 프리뷰 + 멀티탭 + 워크스페이스를 지원합니다.
+---
 
-## 스크린샷
+![Machodown Split View](docs/screenshots/01-split-view-dark.png)
 
-![Machodown 스플릿 뷰](docs/screenshots/01-split-view-dark.png)
+---
 
-## 기능
+## Why Machodown?
 
-- **멀티탭 편집** — 여러 파일을 탭으로 동시에 열기
-- **실시간 프리뷰** — GFM, KaTeX 수식, 코드 하이라이팅, TOC 지원
-- **스플릿 뷰** — 에디터 / 프리뷰 / 에디터+프리뷰 전환
-- **스크롤 싱크** — 에디터↔프리뷰 양방향 스크롤 동기화
-- **워크스페이스** — 폴더 기반 사이드바 파일 탐색
-- **파일 감시** — 외부 변경 감지 및 충돌 해소
-- **자동저장** — 설정 가능한 간격으로 자동 저장
-- **백업** — 비정상 종료 시 복구 지원
-- **검색 & 교체** — 정규식 지원 에디터 내 검색
-- **테마** — 라이트 / 다크 / 시스템 자동
-- **자동 업데이트** — GitHub Releases를 통한 자동 업데이트
+Most Markdown editors are either too minimal or too bloated. Machodown brings the **VS Code editing experience** — Monaco Editor, real-time preview, multi-tab workspace — packaged as a focused desktop app.
 
-## 시스템 요구사항
+No subscriptions. No cloud sync. Just your files, your way.
 
-| OS | 지원 버전 |
+---
+
+## Features
+
+| | Feature | Description |
+|---|---|---|
+| ✍️ | **Monaco Editor** | Full VS Code editor engine — autocomplete, syntax highlight, regex search |
+| 👁️ | **Live Preview** | GFM, KaTeX math, code highlight, auto-scroll sync |
+| 🪟 | **Flexible Views** | Editor-only / Preview-only / Split view, toggled instantly |
+| 📑 | **Multi-tab** | Open multiple files side by side with persistent state |
+| 💾 | **Auto-save** | Configurable interval + crash recovery backup |
+| 📁 | **Workspace** | Folder-based sidebar file explorer |
+| 🔄 | **File Watch** | External change detection and conflict resolution |
+| 🔍 | **Search & Replace** | Regex-powered find & replace across the editor |
+| 🎨 | **Themes** | Light / Dark / System auto |
+| ⬆️ | **Auto-update** | Silent updates via GitHub Releases |
+| 📐 | **KaTeX Math** | Full LaTeX math rendering inline and block |
+| 📋 | **TOC Panel** | Auto-generated table of contents sidebar |
+| ⌨️ | **Command Palette** | `Cmd+K` for everything |
+
+---
+
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/01-split-view-dark.png" alt="Split View Dark"/></td>
+    <td><img src="docs/screenshots/01-split-view-light.png" alt="Split View Light"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Split View — Dark</em></td>
+    <td align="center"><em>Split View — Light</em></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/02-editor-only.png" alt="Editor Only"/></td>
+    <td><img src="docs/screenshots/03-preview-only.png" alt="Preview Only"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Editor Focus</em></td>
+    <td align="center"><em>Preview Focus</em></td>
+  </tr>
+</table>
+
+---
+
+## Installation
+
+### macOS (Recommended)
+
+Download from [Releases](https://github.com/hongmacho/machodown/releases):
+
+| Chip | File |
 |---|---|
-| macOS | 12 Monterey 이상 |
-| Windows | Windows 10 이상 (x64) |
-| Linux | Ubuntu 20.04 이상 (x64) |
+| Apple Silicon (M1/M2/M3) | `Machodown-1.0.0-arm64.dmg` |
+| Intel | `Machodown-1.0.0-x64.dmg` |
 
-## 설치
-
-### macOS
-1. [Releases](https://github.com/hongmacho/machodown/releases) 페이지에서 `Machodown-{version}-arm64.dmg` (Apple Silicon) 또는 `Machodown-{version}-x64.dmg` (Intel) 다운로드
-2. DMG를 열고 Applications 폴더로 드래그
-
-### Windows
-1. `Machodown-{version}-x64.exe` (NSIS 설치 프로그램) 또는 `Machodown-{version}-x64-portable.exe` (포터블) 다운로드
-2. 설치 프로그램 실행
+> Code-signed and notarized by Apple — no "unidentified developer" warnings.
 
 ### Linux
-1. `Machodown-{version}-x64.AppImage` 또는 `machodown_{version}_amd64.deb` 다운로드
-2. AppImage: `chmod +x Machodown-*.AppImage && ./Machodown-*.AppImage`
-3. deb: `sudo dpkg -i machodown_*.deb`
 
-## 키보드 단축키
-
-### 파일
-
-| 단축키 | 동작 |
+| Format | File |
 |---|---|
-| `Cmd/Ctrl + N` | 새 파일 |
-| `Cmd/Ctrl + O` | 파일 열기 |
-| `Cmd/Ctrl + S` | 저장 |
-| `Cmd/Ctrl + Shift + S` | 다른 이름으로 저장 |
-| `Cmd/Ctrl + W` | 탭 닫기 |
+| AppImage | `Machodown-1.0.0-x86_64.AppImage` |
+| Debian / Ubuntu | `machodown_1.0.0_amd64.deb` |
 
-### 보기
+```bash
+# AppImage
+chmod +x Machodown-*.AppImage && ./Machodown-*.AppImage
 
-| 단축키 | 동작 |
+# deb
+sudo dpkg -i machodown_*.deb
+```
+
+### Homebrew (macOS)
+
+> Homebrew Cask submission is [in review](https://github.com/Homebrew/homebrew-cask/pull/265869). Once merged:
+
+```bash
+brew install --cask machodown
+```
+
+---
+
+## Keyboard Shortcuts
+
+### File
+
+| Shortcut | Action |
 |---|---|
-| `Cmd/Ctrl + \` | 사이드바 토글 |
-| `Cmd/Ctrl + Shift + P` | 프리뷰 토글 |
-| `Cmd/Ctrl + Shift + E` | 에디터 전용 |
-| `Cmd/Ctrl + Shift + V` | 프리뷰 전용 |
-| `Cmd/Ctrl + Shift + B` | 스플릿 뷰 |
+| `Cmd/Ctrl + N` | New file |
+| `Cmd/Ctrl + O` | Open file |
+| `Cmd/Ctrl + S` | Save |
+| `Cmd/Ctrl + Shift + S` | Save as |
+| `Cmd/Ctrl + W` | Close tab |
 
-### 편집
+### View
 
-| 단축키 | 동작 |
+| Shortcut | Action |
 |---|---|
-| `Cmd/Ctrl + F` | 검색 |
-| `Cmd/Ctrl + H` | 검색 & 교체 |
-| `Cmd/Ctrl + Z` | 실행 취소 |
-| `Cmd/Ctrl + Shift + Z` | 다시 실행 |
-| `Cmd/Ctrl + /` | 행 주석 토글 |
-| `Tab` | 들여쓰기 |
-| `Shift + Tab` | 내어쓰기 |
+| `Cmd/Ctrl + \` | Toggle sidebar |
+| `Cmd/Ctrl + Shift + E` | Editor only |
+| `Cmd/Ctrl + Shift + V` | Preview only |
+| `Cmd/Ctrl + Shift + B` | Split view |
 
-### 탭
+### Edit
 
-| 단축키 | 동작 |
+| Shortcut | Action |
 |---|---|
-| `Cmd/Ctrl + 1~9` | 탭 직접 이동 |
-| `Cmd/Ctrl + Tab` | 다음 탭 |
-| `Cmd/Ctrl + Shift + Tab` | 이전 탭 |
+| `Cmd/Ctrl + F` | Find |
+| `Cmd/Ctrl + H` | Find & replace |
+| `Cmd/Ctrl + /` | Toggle comment |
+| `Cmd/Ctrl + K` | Command palette |
 
-### 기타
+### Tabs
 
-| 단축키 | 동작 |
+| Shortcut | Action |
 |---|---|
-| `Cmd/Ctrl + ,` | 설정 열기 |
-| `Cmd/Ctrl + K` | 명령어 팔레트 |
-| `Cmd/Ctrl + Shift + ?` | 단축키 목록 |
+| `Cmd/Ctrl + 1–9` | Jump to tab |
+| `Cmd/Ctrl + Tab` | Next tab |
+| `Cmd/Ctrl + Shift + Tab` | Previous tab |
 
-## 개발 환경 세팅
+---
+
+## Development
 
 ```bash
 git clone https://github.com/hongmacho/machodown.git
@@ -110,29 +155,43 @@ npm install
 npm run dev
 ```
 
-### 주요 명령어
+### Commands
 
 ```bash
-npm run typecheck   # 타입 체크
-npm test            # 단위 테스트
-npm run test:watch  # 테스트 (watch)
-npm run lint        # 린트
-npm run build       # 빌드
-npm run package     # 패키지 생성 (현재 OS)
+npm run typecheck   # Type check
+npm test            # Unit tests
+npm run lint        # Lint
+npm run build       # Production build
+npm run package     # Package for current OS
 ```
 
-## 기술 스택
+### Stack
 
 - **Electron 28** + **electron-vite 2**
 - **React 18** + **TypeScript 5** (strict)
-- **Monaco Editor** — 코드 에디터 엔진
-- **markdown-it** — 마크다운 파싱
-- **KaTeX** — 수식 렌더링
-- **Zustand** — 상태 관리
-- **Vitest** — 단위 테스트
-- **Playwright** — E2E 테스트
-- **electron-updater** — 자동 업데이트
+- **Monaco Editor** — editor engine
+- **markdown-it** — Markdown parsing
+- **KaTeX** — math rendering
+- **Zustand** — state management
+- **Vitest** — unit tests
 
-## 라이선스
+---
+
+## Requirements
+
+| OS | Minimum |
+|---|---|
+| macOS | 12 Monterey |
+| Linux | Ubuntu 20.04 (x64) |
+
+---
+
+## Contributing
+
+Issues and PRs are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## License
 
 [MIT](LICENSE)
