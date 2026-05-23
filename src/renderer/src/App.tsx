@@ -10,7 +10,6 @@ import { useSessionRestore } from './hooks/useSessionRestore'
 import { useRecoveryDetection } from './hooks/useRecoveryDetection'
 import { useWorkspaceWatcher } from './hooks/useWorkspaceWatcher'
 import { useFileWatcher } from './hooks/useFileWatcher'
-import { useUpdater } from './hooks/useUpdater'
 import { useTocExtractor } from './hooks/useTocExtractor'
 import { TitleBar } from './components/layout/TitleBar'
 import { MenuBar } from './components/layout/MenuBar'
@@ -41,7 +40,6 @@ export default function App(): React.ReactElement {
   useRecoveryDetection()
   useWorkspaceWatcher()
   useFileWatcher()
-  useUpdater()
   useTocExtractor()
 
   useEffect(() => {

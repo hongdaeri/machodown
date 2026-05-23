@@ -61,7 +61,6 @@ export type ModalType =
   | 'encoding'
   | 'eol'
   | 'welcome'
-  | 'releaseNotes'
   | 'settings'
   | 'recovery'
   | 'commandPalette'
